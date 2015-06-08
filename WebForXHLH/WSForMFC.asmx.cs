@@ -18,9 +18,19 @@ namespace WebForXHLH
     {
 
         [WebMethod]
-        public string HelloWorld()
+        public void SelectJsonData()
         {
-            return "Hello World";
+            Context.Response.ContentType = "text/json";
+            Context.Response.Write("JSON格式字符串");
+            Context.Response.End();
+        }
+
+        [WebMethod]
+        public void InsertJsonData(string data)
+        {
+            Context.Response.ContentType = "text/json";
+            Context.Response.Write("JSON格式字符串");
+            Context.Response.End();
         }
     }
 }
